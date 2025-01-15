@@ -4,3 +4,7 @@ export interface User {
   email: string;
   auth_token: string;
 }
+export interface ApiParam {
+  data?: any;
+  params?: any;
+}
