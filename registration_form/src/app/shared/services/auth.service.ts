@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User } from '../interface/user';
 
 @Injectable({
   providedIn: 'root',
@@ -6,12 +7,12 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   constructor() {}
 
-  setUserToken(token: string): void {
-    localStorage.setItem('auth_token', token);
+  setUserToken(user: User): void {
+    localStorage.setItem('user', JSON.stringify(user));
   }
 
-  getUserToken(): string | null {
-    return localStorage.getItem('auth_token');
+  getUser(): User {
+    return JSON.parse(localStorage.getItem('user') ?? '');
   }
 
   clearStorage(): void {
