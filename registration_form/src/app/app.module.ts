@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
+import { LoginComponent } from './account/login/login.component';
+import { RegistrationComponent } from './registration/registration/registration.component';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent, RegistrationComponent],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [
     {
