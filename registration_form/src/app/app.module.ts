@@ -8,9 +8,10 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { LoginComponent } from './account/login/login.component';
 import { RegistrationComponent } from './registration/registration/registration.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegistrationComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule, ReactiveFormsModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
